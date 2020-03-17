@@ -1,0 +1,18 @@
+{
+  "defaultConnection": "default",
+  "connections": {
+    "default": {
+      "connector": "bookshelf",
+      "settings": {
+        "client": "postgres",
+        "database": "ultrahack_3_1",
+        "host": "ultrahack-3-1.cxoadxjf21fx.eu-west-1.rds.amazonaws.com",
+        "port": "5433",
+        "username": "ultrahacker0",
+        "password": "ultrahacker01s1cure",
+        "ssl": true
+      },
+      "options": {}
+    }
+  }
+}
