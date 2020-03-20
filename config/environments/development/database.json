@@ -10,7 +10,7 @@
         "port": "5433",
         "username": "ultrahacker0",
         "password": "ultrahacker01s1cure",
-        "ssl": true
+        "ssl": false
       },
       "options": {}
     }
