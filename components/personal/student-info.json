@@ -1,0 +1,29 @@
+{
+  "connection": "default",
+  "collectionName": "components_personal_student_infos",
+  "info": {
+    "name": "Student_Info",
+    "icon": "book-dead"
+  },
+  "options": {},
+  "attributes": {
+    "School_University": {
+      "type": "string"
+    },
+    "Year_Of_Study": {
+      "type": "integer"
+    },
+    "Field_Of_Study": {
+      "type": "string"
+    },
+    "Graduation_Year": {
+      "type": "integer",
+      "max": 2666,
+      "min": 1900
+    },
+    "Graduated": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}

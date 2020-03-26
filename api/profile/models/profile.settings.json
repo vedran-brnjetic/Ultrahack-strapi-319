@@ -1,0 +1,98 @@
+{
+  "kind": "collectionType",
+  "connection": "default",
+  "collectionName": "profiles",
+  "info": {
+    "name": "Profile"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "Display_Name": {
+      "type": "string"
+    },
+    "Profile_Pic": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload",
+      "required": false
+    },
+    "City": {
+      "type": "string"
+    },
+    "Country": {
+      "type": "string"
+    },
+    "Phone_Number": {
+      "type": "string"
+    },
+    "Location_Public": {
+      "type": "boolean",
+      "default": false
+    },
+    "Phone_Public": {
+      "type": "boolean",
+      "default": false
+    },
+    "Email_Public": {
+      "type": "boolean",
+      "default": false
+    },
+    "Receive_Newsletter": {
+      "type": "boolean",
+      "default": false
+    },
+    "Source_Control_Profiles": {
+      "type": "json"
+    },
+    "Special_Needs": {
+      "type": "string"
+    },
+    "Birth_Year": {
+      "type": "integer",
+      "min": 1900,
+      "max": 2666
+    },
+    "T_Shirt_Size": {
+      "type": "string",
+      "maxLength": 4
+    },
+    "Full_Name": {
+      "type": "string"
+    },
+    "Expertise_Status": {
+      "type": "string"
+    },
+    "Expertise_Roles": {
+      "type": "string"
+    },
+    "Personal_Introduction": {
+      "type": "string"
+    },
+    "Linkedin_Profile_Link": {
+      "type": "string"
+    },
+    "Company": {
+      "type": "string"
+    },
+    "Employee_Student_Switch": {
+      "type": "string"
+    },
+    "user": {
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "Employee_Info": {
+      "type": "component",
+      "repeatable": true,
+      "component": "personal.employee-info"
+    },
+    "Student_Info": {
+      "type": "component",
+      "repeatable": true,
+      "component": "personal.student-info"
+    }
+  }
+}

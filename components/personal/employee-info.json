@@ -1,0 +1,29 @@
+{
+  "connection": "default",
+  "collectionName": "components_personal_employee_infos",
+  "info": {
+    "name": "Employee_Info",
+    "icon": "id-card"
+  },
+  "options": {},
+  "attributes": {
+    "Company_Name": {
+      "type": "string"
+    },
+    "Industry": {
+      "type": "string"
+    },
+    "Employee_Role": {
+      "type": "string"
+    },
+    "Startup": {
+      "type": "boolean"
+    },
+    "Company_URL": {
+      "type": "string"
+    },
+    "Active": {
+      "type": "boolean"
+    }
+  }
+}
