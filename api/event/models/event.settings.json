@@ -1,0 +1,79 @@
+{
+  "kind": "collectionType",
+  "connection": "default",
+  "collectionName": "events",
+  "info": {
+    "name": "Event"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "unique": true
+    },
+    "slug": {
+      "type": "string",
+      "unique": true
+    },
+    "Slug": {
+      "type": "uid",
+      "targetField": "slug"
+    },
+    "event_start": {
+      "type": "datetime"
+    },
+    "event_end": {
+      "type": "datetime"
+    },
+    "application_deadline": {
+      "type": "datetime"
+    },
+    "short_description": {
+      "type": "string"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "poster": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload",
+      "required": false
+    },
+    "how_to_apply": {
+      "type": "text"
+    },
+    "applications_closed": {
+      "type": "boolean",
+      "default": true
+    },
+    "phase": {
+      "type": "enumeration",
+      "enum": [
+        "Formulation",
+        "Published",
+        "Recruitment",
+        "ApplicationsClosed",
+        "Event",
+        "Aftermath",
+        "Archived"
+      ]
+    },
+    "prize_pool": {
+      "type": "string"
+    },
+    "slackURL": {
+      "type": "string"
+    },
+    "bluejeansURL": {
+      "type": "string"
+    },
+    "challenges": {
+      "via": "event",
+      "collection": "challenge"
+    }
+  }
+}

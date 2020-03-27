@@ -1,0 +1,81 @@
+{
+  "kind": "collectionType",
+  "connection": "default",
+  "collectionName": "challenges",
+  "info": {
+    "name": "Challenge"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title"
+    },
+    "Poster": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload",
+      "required": false
+    },
+    "short_description": {
+      "type": "string"
+    },
+    "background_information": {
+      "type": "richtext"
+    },
+    "solution_domains": {
+      "type": "richtext"
+    },
+    "constraints": {
+      "type": "richtext"
+    },
+    "full_description": {
+      "type": "richtext"
+    },
+    "judges_mentors": {
+      "type": "richtext"
+    },
+    "schedule": {
+      "type": "richtext"
+    },
+    "faq": {
+      "type": "richtext"
+    },
+    "how_to_join": {
+      "type": "richtext"
+    },
+    "prizes": {
+      "type": "richtext"
+    },
+    "venue": {
+      "type": "string"
+    },
+    "team_member_limit": {
+      "type": "integer",
+      "default": 5,
+      "min": 1,
+      "max": 10
+    },
+    "acceptance_email_template": {
+      "type": "richtext"
+    },
+    "acceptance_email_subject": {
+      "type": "string"
+    },
+    "event": {
+      "model": "event",
+      "via": "challenges"
+    },
+    "resources": {
+      "type": "component",
+      "repeatable": true,
+      "component": "challenges.resource"
+    }
+  }
+}

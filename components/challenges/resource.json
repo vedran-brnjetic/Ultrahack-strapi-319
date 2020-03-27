@@ -1,0 +1,20 @@
+{
+  "connection": "default",
+  "collectionName": "components_challenges_resources",
+  "info": {
+    "name": "Resource",
+    "icon": "bars"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "URL": {
+      "type": "string"
+    }
+  }
+}
