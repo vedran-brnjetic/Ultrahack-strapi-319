@@ -93,6 +93,11 @@
       "type": "component",
       "repeatable": true,
       "component": "personal.student-info"
+    },
+    "Skills": {
+      "type": "component",
+      "repeatable": true,
+      "component": "personal.skills"
     }
   }
 }

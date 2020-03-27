@@ -1,0 +1,19 @@
+{
+  "connection": "default",
+  "collectionName": "components_personal_skills",
+  "info": {
+    "name": "Skills",
+    "icon": "award"
+  },
+  "options": {},
+  "attributes": {
+    "Skill_Name": {
+      "type": "string"
+    },
+    "Rating": {
+      "type": "integer",
+      "max": 5,
+      "min": 1
+    }
+  }
+}
