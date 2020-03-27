@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/submissioncomments",
+      "handler": "Submissioncomment.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/submissioncomments/count",
+      "handler": "Submissioncomment.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/submissioncomments/:id",
+      "handler": "Submissioncomment.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/submissioncomments",
+      "handler": "Submissioncomment.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/submissioncomments/:id",
+      "handler": "Submissioncomment.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/submissioncomments/:id",
+      "handler": "Submissioncomment.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

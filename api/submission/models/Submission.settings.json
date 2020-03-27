@@ -1,0 +1,106 @@
+{
+  "connection": "default",
+  "collectionName": "submissions",
+  "info": {
+    "name": "submission",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": [
+      "created_at",
+      "updated_at"
+    ],
+    "comment": ""
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "short_description": {
+      "type": "text"
+    },
+    "full_description": {
+      "type": "text",
+      "default": "**Feel free to edit this however you like, but please try to follow these guidelines:**\n\n## Define the problem and its importance\n\n## Describe the solution\n\n## What is the value to its users or customers?\n\n## What are you planning to build during the Online Hackathon?"
+    },
+    "full_description_public": {
+      "type": "boolean"
+    },
+    "cover_image": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload"
+    },
+    "tech_stack": {
+      "type": "string"
+    },
+    "tech_stack_public": {
+      "type": "boolean"
+    },
+    "try_it_out_url": {
+      "type": "string"
+    },
+    "try_it_out_url_public": {
+      "type": "boolean"
+    },
+    "status": {
+      "enum": [
+        "Draft",
+        "Submitted",
+        "Accepted",
+        "Winner"
+      ],
+      "type": "enumeration"
+    },
+    "tags": {
+      "type": "string"
+    },
+    "project_overview": {
+      "type": "text"
+    },
+    "shortlisted": {
+      "type": "boolean"
+    },
+    "team": {
+      "model": "team",
+      "via": "submissions"
+    },
+    "comments": {
+      "columnName": "Comment",
+      "collection": "submissioncomment",
+      "via": "submission"
+    },
+    "media": {
+      "collection": "file",
+      "via": "related",
+      "plugin": "upload"
+    },
+    "video_link": {
+      "type": "string"
+    },
+    "presentation": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload"
+    },
+    "version_control": {
+      "type": "string"
+    },
+    "production_details": {
+      "type": "text"
+    },
+    "video_pitch": {
+      "type": "string"
+    },
+    "need_help": {
+      "type": "boolean"
+    },
+    "required_skills": {
+      "type": "string"
+    },
+    "media_files_mapping": {
+      "type": "json"
+    }
+  }
+}

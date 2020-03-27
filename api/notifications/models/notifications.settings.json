@@ -1,0 +1,36 @@
+{
+  "info": {
+    "name": "Notifications"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "Message": {
+      "type": "text",
+      "private": true
+    },
+    "sender_user": {
+      "type": "integer",
+      "private": true
+    },
+    "recipients": {
+      "plugin": "users-permissions",
+      "collection": "user"
+    },
+    "Subject": {
+      "type": "string",
+      "private": true
+    },
+    "direct_email_recipient": {
+      "type": "email",
+      "private": true
+    },
+    "notification_type": {
+      "type": "string"
+    }
+  },
+  "connection": "default",
+  "collectionName": "notifications"
+}

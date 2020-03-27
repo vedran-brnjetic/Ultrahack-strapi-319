@@ -1,0 +1,45 @@
+{
+  "connection": "default",
+  "collectionName": "teams",
+  "info": {
+    "name": "team",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": [
+      "created_at",
+      "updated_at"
+    ],
+    "comment": ""
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "team_poster": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload"
+    },
+    "team_members": {
+      "collection": "teammember",
+      "via": "team"
+    },
+    "challenge": {
+      "via": "teams",
+      "model": "challenge"
+    },
+    "team_lead": {
+      "via": "teams",
+      "model": "profile"
+    },
+    "submissions": {
+      "collection": "submission",
+      "via": "team"
+    }
+  }
+}

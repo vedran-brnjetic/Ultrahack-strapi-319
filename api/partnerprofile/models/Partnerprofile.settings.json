@@ -1,0 +1,47 @@
+{
+  "connection": "default",
+  "collectionName": "Partner Profiles",
+  "info": {
+    "name": "partnerprofile",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": [
+      "created_at",
+      "updated_at"
+    ],
+    "comment": ""
+  },
+  "attributes": {
+    "description": {
+      "type": "text"
+    },
+    "company": {
+      "type": "string"
+    },
+    "contact-email": {
+      "type": "email"
+    },
+    "contact-phone": {
+      "type": "string"
+    },
+    "subrole": {
+      "enum": [
+        "Mentor",
+        "Judge",
+        "Challenge Partner"
+      ],
+      "type": "enumeration"
+    },
+    "challenges": {
+      "via": "partnerprofiles",
+      "collection": "challenge",
+      "dominant": true
+    },
+    "profile": {
+      "via": "partnerprofile",
+      "model": "profile"
+    }
+  }
+}

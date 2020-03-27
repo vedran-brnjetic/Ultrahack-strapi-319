@@ -1,0 +1,41 @@
+{
+  "connection": "default",
+  "collectionName": "teammembers",
+  "info": {
+    "name": "teammember",
+    "description": "Team membership requests and status"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": [
+      "created_at",
+      "updated_at"
+    ],
+    "comment": ""
+  },
+  "attributes": {
+    "status": {
+      "enum": [
+        "requested",
+        "invited",
+        "accepted",
+        "declined",
+        "left",
+        "banned",
+        "profile deleted"
+      ],
+      "type": "enumeration"
+    },
+    "message": {
+      "type": "text"
+    },
+    "team": {
+      "model": "team",
+      "via": "team_members"
+    },
+    "profile": {
+      "via": "teammembers",
+      "model": "profile"
+    }
+  }
+}

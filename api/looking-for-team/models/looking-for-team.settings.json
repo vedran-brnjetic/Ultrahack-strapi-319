@@ -1,0 +1,23 @@
+{
+  "info": {
+    "name": "Looking_For_Team"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "Matchmaking_Request": {
+      "type": "boolean",
+      "default": false
+    },
+    "challenge": {
+      "model": "challenge"
+    },
+    "profile": {
+      "model": "profile"
+    }
+  },
+  "connection": "default",
+  "collectionName": "looking_for_teams"
+}

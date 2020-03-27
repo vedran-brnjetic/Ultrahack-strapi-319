@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/looking-for-teams",
+      "handler": "looking-for-team.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/looking-for-teams/count",
+      "handler": "looking-for-team.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/looking-for-teams/:id",
+      "handler": "looking-for-team.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/looking-for-teams",
+      "handler": "looking-for-team.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/looking-for-teams/:id",
+      "handler": "looking-for-team.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/looking-for-teams/:id",
+      "handler": "looking-for-team.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

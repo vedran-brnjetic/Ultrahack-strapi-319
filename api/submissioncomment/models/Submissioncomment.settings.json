@@ -1,0 +1,29 @@
+{
+  "connection": "default",
+  "collectionName": "Submission Comments",
+  "info": {
+    "name": "submissioncomment",
+    "description": "Allows comments on the submission"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": [
+      "created_at",
+      "updated_at"
+    ],
+    "comment": ""
+  },
+  "attributes": {
+    "comment": {
+      "type": "text"
+    },
+    "profile": {
+      "via": "submissioncomments",
+      "model": "profile"
+    },
+    "submission": {
+      "model": "submission",
+      "via": "comments"
+    }
+  }
+}
